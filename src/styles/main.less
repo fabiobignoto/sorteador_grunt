@@ -1,9 +1,11 @@
 @fontePrincipal: Roboto, sans-serif;
 @fonteDoTitulo: Lobster, cursive;
-@corDoTexto: #fff;
-@corDoFundo: #eb3b5c;
+@corDoTexto: #ffffff;
+@corDoFundo: #0f7308;
 @corDoTextoDoBotao: #000;
-@corDoFundoDoBotao: #f7b331;
+@corDoFundoDoBotao: #c9e7e3;
+@corDoFundoDoBotaoHover: rgba(201, 231, 227,0.7);
+
 
 body {
     background-color: @corDoFundo;
@@ -35,6 +37,11 @@ button {
     background-color:@corDoFundoDoBotao;
     color: @corDoTextoDoBotao;
     font-family: @fontePrincipal;
+}
+
+button:hover{
+    transform: scale(1.05);
+    background-color: @corDoFundoDoBotaoHover;
 }
 
 input {
