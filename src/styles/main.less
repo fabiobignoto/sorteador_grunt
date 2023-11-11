@@ -4,7 +4,7 @@
 @corDoFundo: #0f7308;
 @corDoTextoDoBotao: #000;
 @corDoFundoDoBotao: #c9e7e3;
-@corDoFundoDoBotaoHover: rgba(201, 231, 227,0.7);
+@corDoFundoDoBotaoHover: rgba(202, 231, 227, 0.8);
 
 
 body {
@@ -13,18 +13,39 @@ body {
     color: @corDoTexto;
 }
 
-h1{
-    font-family: @fonteDoTitulo;
-    font-size: 3em;
-    margin: 20px auto;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 
 main {
     max-width: 960px;
     width: 100%;
+    height: 95vh;
     margin: 0 auto;
-    font-size: 2em;
+    font-size: 24px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+
+}
+
+h1{
+    font-family: @fonteDoTitulo;
+    display: block;;
+    font-size: 3em;
+    margin: 0 auto;
+    @media (max-width:550px) {
+        font-size: 2em;
+    }
 }
 
 button {
@@ -37,10 +58,12 @@ button {
     background-color:@corDoFundoDoBotao;
     color: @corDoTextoDoBotao;
     font-family: @fontePrincipal;
+    transition: all 0.5s;
+
+
 }
 
 button:hover{
-    transform: scale(1.05);
     background-color: @corDoFundoDoBotaoHover;
 }
 
@@ -58,12 +81,19 @@ input {
 
 .resultado {
     padding: 16px;
-    margin-top: 80px;
+    margin-top: 45px;
     border: 8px dotted #fff;
+    height: 25vh;
+    min-height: 114px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
     #resultado-valor{
         font-weight: bold;
         font-size: 3em;
         display: block;
+        animation: all 0.5s;
     }
 }
